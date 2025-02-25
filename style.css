@@ -1,0 +1,122 @@
+:root {
+    --color1: #4a79b7;
+    --color2: #b9cfec;
+    --space1: 0.5rem;
+    --space2: 1rem;
+    --space3: 1.5rem;
+    --space4: 2rem;
+}
+
+body, html {
+    margin: 0;
+    height: 100vh;
+}
+.head {
+    height: 4rem;
+    background-color: var(--color1);
+    margin: 0;
+    padding-left: var(--space4);
+    display: flex;
+    align-items: center;
+}
+.main-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: calc(100vh - 4rem);
+
+}
+
+#map {
+    height: calc(100vh - 4rem);
+    width: 80%;
+}
+
+#client-contenitor {
+    overflow-y: scroll;
+    height: 100vh;
+}
+.client {
+    background-color: var(--color2);
+    border-radius: var(--space1);
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.lateral-contain {
+    text-align: center;
+    height: calc(100vh - 4rem);
+    overflow: auto;
+    width: 20%;
+}
+.active {
+  background-color: #4a79b7;
+}
+
+.filter-button {
+  margin: var(--space1);
+}
+.filter-button button {
+  border: 1px solid black;
+  padding: var(--space1) 0.7rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.filter-search {
+  margin: var(--space2);
+}
+
+#hamburger {
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.display {
+    display: none;
+}
+
+/* effetteohamburger a scomparsa */
+  #hamburger span{
+    background-color:#fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+  }
+  #hamburger span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  #hamburger span:nth-child(2){
+    top:13px;
+    left: 0px;
+  }
+  #hamburger span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+  #hamburger.open span:nth-child(1){
+    transform: rotate(45deg) scaleX(0.7);
+    top: 13PX;
+    left: -8px;
+  }
+  #hamburger.open span:nth-child(2){
+    transform: scale(0);
+    transition-duration: 50ms
+  }
+  #hamburger.open span:nth-child(3){
+    transform: rotate(-45deg) scaleX(0.7);
+    top: 13PX;
+    left: 7px;
+  }
+
+
+

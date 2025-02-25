@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://maps.googleapis.com/maps/api/js?v=weekly"
+    defer
+    ></script> 
+    <script src="script.js" type="module"></script>
+    </body>
+</head>
+<body>
+    <div class="head">
+        <div id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <h1>Store</h1>
+    </div>
+    <section class="main-contain">
+        <article class="lateral-contain">
+            <div class="filter-button">
+                <button data-filter="All" class="active">Tutti</button>
+                <button data-filter="smartphone">smartphone</button>
+                <button data-filter="tv">tv</button>
+                <button data-filter="computer">computer</button>
+            </div>
+            <div class="filter-search">
+                <input id="search-store" placeholder="filter as desired"  style="width: 80%;">
+                <button id="clear-store">x</button>
+            </div>
+            <div id="client-contenitor"></div>
+        </article>
+        <div id="map"></div>
+    </section>
+</html>
+
+

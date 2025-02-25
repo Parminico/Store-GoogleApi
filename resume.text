@@ -1,0 +1,54 @@
+index:
+            <div class="trova-button">
+                <button data-trova="All" class="active">Tutti</button>
+                <button data-trova="smartphone">smartphone</button>
+                <button data-trova="tv">tv</button>
+                <button data-trova="computer">computer</button>
+            </div>
+
+js: 
+            let buttons = Array.from(document.querySelectorAll('.trova-button button'));
+            let buttonsContainer = document.querySelector('.trova-button');
+
+            buttonsContainer.addEventListener('click', (e) => {
+            let pressedButton = e.target.closest('button')
+            if(pressedButton) {
+                pressedButton.classList.add('active');
+                let other = buttons.filter(button => button !== pressedButton);
+                other.forEach(butt => butt.classList.remove('active'))
+            }
+            })
+
+APPLICHIAMO FILTRO IN BASE A QUALE BOTTONE PREMIAMO, ANDANDO POI A DISATTIVARE QUELLI DI PRIMA SOSTITUENDO LA CLASSE ACTIVE CHE DEFINIAMO NEL CSS 
+
+
+FACENDO SEGUITO ALL'ESERCIZIO PRECEDENTE, CON LA CLASSE DATASET POSSIAMO IDENTIFICARE IL VALORE CHE ABBIAMO ASSEGNATO NELL'INDEX CON data-trova
+
+console.log(pressedButton.dataset.filter) -> All / smartphone / tv / computer, in base a quello che premiamo
+lz 50
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+
+Il find()metodo di Arrayistanze restituisce il primo elemento nell'array fornito che soddisfa la funzione di test fornita. Se nessun valore soddisfa la funzione di test, undefinedviene restituito.
+lz 50
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
