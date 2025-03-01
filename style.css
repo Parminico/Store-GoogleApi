@@ -63,6 +63,9 @@ body, html {
   padding: var(--space1) 0.7rem;
   cursor: pointer;
   border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fill-available;
 }
 
 .filter-search {
@@ -118,5 +121,9 @@ body, html {
     left: 7px;
   }
 
+@media screen and (max-width: 700px) {
+  .lateral-contain {
+    width: 40%;
+  }
 
-
+}
